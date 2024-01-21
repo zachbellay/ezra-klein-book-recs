@@ -18,6 +18,6 @@ from django.http import HttpResponse
 from django.urls import include, path
 
 urlpatterns = [
-    path('', include('books.urls')),
+    path("", include("books.urls")),
     path("admin/", admin.site.urls),
 ]
