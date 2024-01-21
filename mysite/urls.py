@@ -15,14 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.http import HttpResponse
-from django.urls import path
-
-
-def home(request):
-    return HttpResponse("hello world")
-
+from django.urls import include, path
 
 urlpatterns = [
-    path("", home),
+    path('', include('books.urls')),
     path("admin/", admin.site.urls),
 ]
